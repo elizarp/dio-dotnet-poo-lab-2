@@ -1,0 +1,13 @@
+/home/eliezer/sandbox/dio/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series
+/home/eliezer/sandbox/dio/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.deps.json
+/home/eliezer/sandbox/dio/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.runtimeconfig.json
+/home/eliezer/sandbox/dio/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.runtimeconfig.dev.json
+/home/eliezer/sandbox/dio/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.dll
+/home/eliezer/sandbox/dio/DIO.Series/bin/Debug/netcoreapp3.1/DIO.Series.pdb
+/home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.csprojAssemblyReference.cache
+/home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.AssemblyInfoInputs.cache
+/home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.AssemblyInfo.cs
+/home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.csproj.CoreCompileInputs.cache
+/home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.dll
+/home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.pdb
+/home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.genruntimeconfig.cache
