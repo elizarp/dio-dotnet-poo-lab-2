@@ -11,3 +11,16 @@
 /home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.dll
 /home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.pdb
 /home/eliezer/sandbox/dio/DIO.Series/obj/Debug/netcoreapp3.1/DIO.Series.genruntimeconfig.cache
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\bin\Debug\netcoreapp3.1\DIO.Series.exe
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\bin\Debug\netcoreapp3.1\DIO.Series.deps.json
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\bin\Debug\netcoreapp3.1\DIO.Series.runtimeconfig.json
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\bin\Debug\netcoreapp3.1\DIO.Series.runtimeconfig.dev.json
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\bin\Debug\netcoreapp3.1\DIO.Series.dll
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\bin\Debug\netcoreapp3.1\DIO.Series.pdb
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\obj\Debug\netcoreapp3.1\DIO.Series.csprojAssemblyReference.cache
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\obj\Debug\netcoreapp3.1\DIO.Series.AssemblyInfoInputs.cache
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\obj\Debug\netcoreapp3.1\DIO.Series.AssemblyInfo.cs
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\obj\Debug\netcoreapp3.1\DIO.Series.csproj.CoreCompileInputs.cache
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\obj\Debug\netcoreapp3.1\DIO.Series.dll
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\obj\Debug\netcoreapp3.1\DIO.Series.pdb
+D:\ADS\Projetos\dio-dotnet-poo-lab-2\obj\Debug\netcoreapp3.1\DIO.Series.genruntimeconfig.cache

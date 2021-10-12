@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3WyFcI/BoU3Za2tUiX4R+4K7kHCzXVQIza69ip1iywzCSzTrzTqamxzC/Pb36AYL40/RBFzdUbcDpzWBCtXGJQ==",
+  "dgSpecHash": "tyTQSKnx89tEQMwK98F5/T1XAJbaLQZHFdeXe6na7i46peu0a5wNmWhFWFeO1xnX+t7aPnzWd86u92eEUdPiCQ==",
   "success": true,
-  "projectFilePath": "/home/eliezer/sandbox/dio/DIO.Series/DIO.Series.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\ADS\\Projetos\\dio-dotnet-poo-lab-2\\DIO.Series.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WINDOWS\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
   "logs": []
 }
