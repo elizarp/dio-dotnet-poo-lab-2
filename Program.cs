@@ -39,21 +39,21 @@ namespace DIO.Series
 				opcaoUsuario = ObterOpcaoUsuario();
 			}
 
-			Console.WriteLine("Obrigado por utilizar nossos serviços.");
+			Console.WriteLine("	<<<< Obrigado por utilizar nossos serviços. >>>>");
 			Console.ReadLine();
         }
 
         private static void ExcluirSerie()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("	Digite o id da série: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
-
+            Console.WriteLine("\n	<<<< Série excluida com sucesso >>>>");
 			repositorio.Exclui(indiceSerie);
 		}
 
         private static void VisualizarSerie()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("	Digite o id da série: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
 			var serie = repositorio.RetornaPorId(indiceSerie);
@@ -63,7 +63,7 @@ namespace DIO.Series
 
         private static void AtualizarSerie()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("	Digite o id da série que deseja atualizar: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
@@ -72,35 +72,49 @@ namespace DIO.Series
 			{
 				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
 			}
-			Console.Write("Digite o gênero entre as opções acima: ");
-			int entradaGenero = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Título da Série: ");
+			Console.Write("	Digite o gênero entre as opções acima: ");
+			int entradaGenero = int.Parse(Console.ReadLine());
+			while (entradaGenero <= 0 || entradaGenero > 13)
+			{
+				Console.WriteLine("\n	<<<< Não existe essa opção cadastrada! >>>>\n");
+				Console.Write("	Digite o gênero entre as opções acima: ");
+				entradaGenero = int.Parse(Console.ReadLine());
+			}
+
+			Console.Write("	Digite o Título da Série: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write("	Digite o Ano de Início da Série: ");
 			int entradaAno = int.Parse(Console.ReadLine());
+			int ano = DateTime.Now.Year;
+			while (entradaAno <= 0 || entradaAno > ano)
+			{
+				Console.WriteLine("\n	<<<< Você precisa digitar um ano válido >>>>");
+				Console.Write("\n	Digite novamente o ano de Início da Série: ");
+				entradaAno = int.Parse(Console.ReadLine());
+			}
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write("	Digite a Descrição da Série: ");
 			string entradaDescricao = Console.ReadLine();
+			Console.WriteLine("\n	<<<< Série atualizada com sucesso!! >>>>");
 
 			Serie atualizaSerie = new Serie(id: indiceSerie,
 										genero: (Genero)entradaGenero,
 										titulo: entradaTitulo,
 										ano: entradaAno,
 										descricao: entradaDescricao);
-
 			repositorio.Atualiza(indiceSerie, atualizaSerie);
 		}
         private static void ListarSeries()
 		{
-			Console.WriteLine("Listar séries");
+			Console.WriteLine("	<<<< Listar séries >>>>");
 
 			var lista = repositorio.Lista();
 
 			if (lista.Count == 0)
 			{
-				Console.WriteLine("Nenhuma série cadastrada.");
+				Console.WriteLine("  Você ainda não cadastou nenhuma série...\n" + "  digite a opção << 2 >> e cadastre uma nova.");
 				return;
 			}
 
@@ -114,7 +128,7 @@ namespace DIO.Series
 
         private static void InserirSerie()
 		{
-			Console.WriteLine("Inserir nova série");
+			Console.WriteLine("	<<<< Inserir nova série >>>>\n");
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
@@ -122,17 +136,32 @@ namespace DIO.Series
 			{
 				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
 			}
-			Console.Write("Digite o gênero entre as opções acima: ");
+           
+			Console.Write("	Digite o gênero entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
-
-			Console.Write("Digite o Título da Série: ");
+			while (entradaGenero <= 0 || entradaGenero > 13)
+			{
+                Console.WriteLine("\n	<<<< Não existe essa opção cadastrada! >>>>\n");
+				Console.Write("	Digite o gênero entre as opções acima: ");
+				entradaGenero = int.Parse(Console.ReadLine());
+			}
+			Console.Write("	Digite o Título da Série: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
-			int entradaAno = int.Parse(Console.ReadLine());
+			Console.Write("	Digite o Ano de Início da Série: ");
+			int entradaAno = int.Parse(Console.ReadLine());			
+			int ano = DateTime.Now.Year;
+			while (entradaAno <= 0 || entradaAno > ano)
+            {
+                Console.WriteLine("\n	<<<< Você precisa digitar um ano válido >>>>");
+				Console.Write("\n	Digite novamente o ano de Início da Série: ");
+				entradaAno = int.Parse(Console.ReadLine());
+			}
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write("	Digite a Descrição da Série: ");
 			string entradaDescricao = Console.ReadLine();
+
+			Console.WriteLine("\n	<<<< Série cadastrada com sucesso >>>>");
 
 			Serie novaSerie = new Serie(id: repositorio.ProximoId(),
 										genero: (Genero)entradaGenero,
@@ -146,17 +175,20 @@ namespace DIO.Series
         private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
-			Console.WriteLine("DIO Séries a seu dispor!!!");
-			Console.WriteLine("Informe a opção desejada:");
+			Console.WriteLine("================================================");
+			Console.WriteLine("	DIO Séries a seu dispor!!!");
+			Console.WriteLine("================================================");
 
-			Console.WriteLine("1- Listar séries");
-			Console.WriteLine("2- Inserir nova série");
-			Console.WriteLine("3- Atualizar série");
-			Console.WriteLine("4- Excluir série");
-			Console.WriteLine("5- Visualizar série");
-			Console.WriteLine("C- Limpar Tela");
-			Console.WriteLine("X- Sair");
-			Console.WriteLine();
+			
+			Console.WriteLine("	1- Listar séries");
+			Console.WriteLine("	2- Inserir nova série");
+			Console.WriteLine("	3- Atualizar série");
+			Console.WriteLine("	4- Excluir série");
+			Console.WriteLine("	5- Visualizar série");
+			Console.WriteLine("	C- Limpar Tela");
+			Console.WriteLine("	X- Sair");
+
+			Console.Write("	Informe a opção desejada: ");
 
 			string opcaoUsuario = Console.ReadLine().ToUpper();
 			Console.WriteLine();
